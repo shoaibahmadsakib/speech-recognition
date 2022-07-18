@@ -27,7 +27,3 @@ def greet_user():
         speak(f"Good evening {USER}")
     else:
         speak(f"Greetings {USER}")
-
-
-if __name__ == "__main__":
-    greet_user()
