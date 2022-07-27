@@ -1,6 +1,7 @@
 import pyttsx3
 from shared import utils
 from decouple import config
+from shared import constants
 
 USER = config('USER')
 BOTNAME = config('BOTNAME')
@@ -20,10 +21,16 @@ def greet_user():
     time_of_day = utils.get_time_of_day()
 
     if time_of_day == "morning":
-        speak(f"Good morning {USER}")
+        speak('Good morning %s' % (USER))
     elif time_of_day == "afternoon":
-        speak(f"Good afternoon {USER}")
+        speak('Good morning %s' % (USER))
     elif time_of_day == "evening":
-        speak(f"Good evening {USER}")
+        speak('Good morning %s' % (USER))
     else:
-        speak(f"Greetings {USER}")
+        speak('Good morning %s' % (USER))
+
+
+def cannot_understand():
+    """ Asks the user to repease himself/herself when unknown command issued """
+    print('Could not understand you')
+    speak(constants.COULD_NOT_UNDERSTAND_TEXT)

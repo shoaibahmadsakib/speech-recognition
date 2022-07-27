@@ -8,5 +8,7 @@ def get_time_of_day():
         return "morning"
     elif (hour >= 12) and (hour < 16):
         return "afternoon"
-    elif (hour >= 16) and (hour < 19):
+    elif (hour >= 16) and (hour <= 23):
         return "evening"
+    else:
+        return "morning"
